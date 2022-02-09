@@ -1,0 +1,28 @@
+{
+  "root": "apps/authtst-e2e",
+  "sourceRoot": "apps/authtst-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/authtst-e2e/cypress.json",
+        "devServerTarget": "authtst:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "authtst:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/authtst-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["authtst"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "authtst": "apps/authtst",
+    "authtst-e2e": "apps/authtst-e2e"
+  }
+}
